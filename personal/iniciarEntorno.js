@@ -4,6 +4,7 @@ var sphere;
 var angulo = 0;
 var clk = new THREE.Clock(false);
 var cual = 0;
+
 function main() {
 
     var aspectRatio = window.innerWidth / window.innerHeight;
@@ -14,8 +15,8 @@ function main() {
 
     scene = new THREE.Scene();
 
-    // var ambientLight = new THREE.AmbientLight(0xAAAAAA, 0.1);
-    // scene.add(ambientLight);
+    var ambientLight = new THREE.AmbientLight(0xAAAAAA, 0.1);
+    scene.add(ambientLight);
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -38,7 +39,7 @@ function updateAspectRatio() {
 }
 
 
-function render() {
+function render() {       
     requestAnimationFrame(render);
     update();
     renderer.render(scene, camera);

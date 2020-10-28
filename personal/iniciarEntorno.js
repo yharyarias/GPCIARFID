@@ -101,7 +101,7 @@ function cargarBolita() {
     var geometry = new THREE.SphereGeometry(2, 32, 32);
     var material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF, metalness: 0.5, roughness: 0 });
     sphere = new THREE.Mesh(geometry, material);
-    sphere.position.set(15, 5, 15);
+    sphere.position.set(15, 2, 15);
     sphere.castShadow = true; //default is false
     sphere.receiveShadow = false; //default
     scene.add(sphere);

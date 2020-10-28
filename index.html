@@ -7,6 +7,24 @@
 				margin: 0px;
 				overflow: hidden;
 			}
+            #botonEmpezar {
+                position: absolute;
+                top:0;
+                left: 0;
+                background-color: white;
+                text-align: center;
+                font-size: 24;
+                border-radius: 4px;
+                color:black;
+                width: 150px;
+                height: 40px;
+            }
+            #botonEmpezar:hover {
+                background-color: beige;
+            }
+            #botonEmpezar:active {
+                background-color: gray;
+            }
         </style>
     </head>
     <body>
@@ -14,8 +32,9 @@
         <!-- Scripts de biblioteca -->
 		<script src="lib/three.min_r96.js"></script>
 		<script src="lib/OrbitControls.js"></script>
-
         <!-- Mi script -->
-        <script src="personal/iniciarEntorno.js"></script>
+        <script src="personal/iniciarEntorno.js"></script>        
+
+        <button id="botonEmpezar" onclick="start()">Empezar</button>
     </body>
 </html>

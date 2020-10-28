@@ -124,6 +124,8 @@ function update() {
 
         if (clk.elapsedTime > 2.5) {
             clk.stop();
+            const button = document.getElementById('botonEmpezar');
+            button.disabled=false;
         }
     }
 
@@ -142,6 +144,8 @@ function getRandomArbitrary(min, max) {
 
 
 function start() {
+    const button = document.getElementById('botonEmpezar');
+    button.disabled=true;
     cual = getRandomArbitrary(0, 3);
     bolaDentro();
     openVaso(0); 
@@ -150,7 +154,6 @@ function start() {
 function openVaso(profundidad) {
     if (profundidad < 5) {
         setTimeout(()=>{
-            console.log("Hola");
             vaso[cual].position.y += 2;
             vaso[cual].rotation.y += Math.PI / 10;
             openVaso(profundidad+1);
@@ -165,7 +168,6 @@ function openVaso(profundidad) {
 function closeVaso(profundidad) {
     if (profundidad < 5) {
         setTimeout(()=>{
-            console.log("Hola");
             vaso[cual].position.y -= 2;
             vaso[cual].rotation.y -= Math.PI / 10;
             closeVaso(profundidad+1);
